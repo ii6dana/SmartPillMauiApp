@@ -1,0 +1,50 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SmartPillMauiApp.Views.Login.LoginPage">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="30">
+
+        <!-- Scroll المحتوى الرئيسي -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="20">
+
+                <Label Text="تسجيل الدخول"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+
+                <Entry x:Name="PhoneNumberEntry"
+                       Placeholder="أدخل رقم الجوال"
+                       Keyboard="Telephone"
+                       HorizontalOptions="Fill" />
+
+                <Button Text="إرسال كود التحقق"
+                        Clicked="SendOtpButton_Clicked"/>
+
+                <Entry x:Name="OtpCodeEntry"
+                       Placeholder="أدخل كود التحقق"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Fill" />
+
+                <Button Text="تسجيل الدخول"
+                        Clicked="LoginButton_Clicked"/>
+
+                <Button Text="تسجيل الدخول بالبريد الإلكتروني"
+                        Clicked="CnvertLoginByEmail"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- رابط الإدمن في أسفل الصفحة -->
+        <Label Grid.Row="2"
+               Text="هل أنت مشرف؟"
+               HorizontalOptions="Center"
+               TextDecorations="Underline"
+               Margin="0,10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AdminLabel_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+    </Grid>
+
+</ContentPage>

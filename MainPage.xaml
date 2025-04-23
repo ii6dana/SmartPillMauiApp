@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPillMauiApp.MainPage"
+             BackgroundColor="#F6F6F4">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+            <!-- اللوجو -->
+            <Image Source="logo.png" 
+                   HeightRequest="300" 
+                   WidthRequest="300" 
+                   Aspect="AspectFit" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"/>
+
+            <!-- رسالة الترحيب -->
+            <Label Text="مرحباً بك" 
+                   FontSize="40" 
+                   FontFamily="AlexandriaSemiBold"
+                   TextColor="#293241" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

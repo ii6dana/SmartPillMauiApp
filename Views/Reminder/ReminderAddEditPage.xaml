@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SmartPillMauiApp.Views.Reminder.ReminderAddEditPage"
+    Title="إضافة / تعديل تنبيه">
+
+    <VerticalStackLayout Padding="10">
+        <Label Text="معرّف المستخدم" />
+        <Entry Text="{Binding ReminderItem.UserID}" Keyboard="Numeric" />
+
+        <Label Text="معرّف الدواء" />
+        <Entry Text="{Binding ReminderItem.MedicineID}" Keyboard="Numeric" />
+
+        <Label Text="وقت التنبيه" />
+        <Entry Text="{Binding ReminderItem.ReminderTime}" />
+
+        <Label Text="ملاحظات" />
+        <Editor Text="{Binding ReminderItem.Notes}" />
+
+        <Button Text="حفظ"
+                Margin="0,10,0,10"
+                Clicked="SaveButton_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

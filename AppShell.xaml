@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SmartPillMauiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SmartPillMauiApp"
+    xmlns:login="clr-namespace:SmartPillMauiApp.Views.Login"
+    xmlns:admin="clr-namespace:SmartPillMauiApp.Views.Admin"
+    xmlns:user="clr-namespace:SmartPillMauiApp.Views.User"
+    xmlns:reminder="clr-namespace:SmartPillMauiApp.Views.Reminder"
+    xmlns:caregiver="clr-namespace:SmartPillMauiApp.Views.Caregiver"
+    Title="SmartPill App">
+
+    <!-- صفحات تسجيل الدخول أو الإدمن والمستخدمين -->
+    <ShellContent
+        Title="تسجيل دخول الإدمن"
+        ContentTemplate="{DataTemplate login:AdminLoginPage}"
+        Route="AdminLoginPage" />
+
+    <!-- صفحات الإدمن -->
+    <ShellContent
+        Title="قائمة الإدمن"
+        ContentTemplate="{DataTemplate admin:AdminListPage}"
+        Route="AdminListPage" />
+
+    <!-- صفحات المستخدمين -->
+    <ShellContent
+        Title="قائمة المستخدمين"
+        ContentTemplate="{DataTemplate user:UserListPage}"
+        Route="UserListPage" />
+
+    <!-- صفحات العلاج -->
+    <ShellContent
+        Title="العلاج"
+        ContentTemplate="{DataTemplate reminder:ReminderAddEditPage}"
+        Route="ReminderAddEditPage" />
+
+    <!-- صفحات التنبيهات -->
+    <ShellContent
+        Title="التنبيهات"
+        ContentTemplate="{DataTemplate reminder:ReminderListPage}"
+        Route="ReminderListPage" />
+
+    <!-- صفحات المرافقين -->
+    <ShellContent
+        Title="المرافقين"
+        ContentTemplate="{DataTemplate caregiver:CaregiverListPage}"
+        Route="CaregiverListPage" />
+
+    <!--<ShellContent
+         Title="الرئيسية"
+         ContentTemplate="{DataTemplate views:HomePage}"
+         Route="HomePage" />-->
+
+</Shell>

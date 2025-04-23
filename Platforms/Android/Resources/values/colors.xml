@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- لون الخلفية الأساسي: رمادي فاتح جداً -->
+	<color name="colorPrimary">#F6F6F4</color>
+
+	<!-- لون البار العلوي: أزرق رمادي غامق (نفس #293241 أو قريب منه) -->
+	<color name="colorPrimaryDark">#293241</color>
+
+	<!-- لون التفاعل: بنفسجي رمادي أنيق -->
+	<color name="colorAccent">#4C4F69</color>
+</resources>
